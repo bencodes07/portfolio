@@ -1,0 +1,7 @@
+Scroll Animations: https://github.com/michalsnik/aos
+Three.JS Blob strong Inspiration and copied Shader: 
+Planning Website: https://trello.com
+
+
+
+
