@@ -1,4 +1,6 @@
+function calculateDaysBetweenDates(begin, end) {
 
+}
 
 // ----- Navbar Change ----- //
 
@@ -98,7 +100,6 @@ function closePopUp3() {
 function contactSubmit() {
   window.alert('Ich habe leider kein BackEnd programmiert. Ich bin nur ein FrontEnd Dev :)');
 }
-
 
 
 
