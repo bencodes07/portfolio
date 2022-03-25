@@ -9,10 +9,12 @@
     "start": "vite build"
   },
   "devDependencies": {
+    "nodemon": "^2.0.15",
     "vite": "^2.8.0"
   },
   "dependencies": {
     "aos": "^2.3.4",
+    "express": "^4.17.3",
     "neovim": "^4.10.1",
     "nodemailer": "^6.7.3",
     "react": "^17.0.2",
