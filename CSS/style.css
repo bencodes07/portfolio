@@ -398,8 +398,6 @@ header.sticky .hamburger:before {
   background: var(--sec-color);
   border-radius: 10px;
   transition: all 0.4s ease;
-  transition-delay: 1s;
-  margin-bottom: 50px;
 }
 
 .card:hover {
@@ -483,7 +481,7 @@ header.sticky .hamburger:before {
 /* Skills */
 
 #skills {
-  margin-top: 200px;
+  margin-top: 0px;
   padding-top: 130px;
   padding-bottom: 1px;
   text-align: center;

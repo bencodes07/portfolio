@@ -1,1 +1,3 @@
-const form = document.querySelector('form');
+function emailSent() {
+  alert("Your email has been sent. Thank you.");
+}

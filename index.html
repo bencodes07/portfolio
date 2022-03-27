@@ -79,7 +79,7 @@
           <hr class="headingHr">
   
           <div class="cardContainer" >
-            <div class="card card1">
+            <div class="card card1" data-aos="fade-up">
   
               <img src="./img/Discord Bot.png"
               alt="" class="cardImg">
@@ -102,7 +102,7 @@
               </div>
             </div>
     
-            <div class="card card2">
+            <div class="card card2" data-aos="fade-up">
     
               <img src="./img/DavisDogs1.png" 
               alt="" class="cardImg">
@@ -126,7 +126,7 @@
               </div>
             </div>
     
-            <div class="card card3">
+            <div class="card card3" data-aos="fade-up">
     
               <img src="./img/Portfolio.png" alt="Portfolio Photo here:" class="cardImg portfolioImg">
               <hr>
@@ -217,11 +217,17 @@
           <h1 class="contactHeading" data-aos="fade-up">Contact</h1>
           <hr class="headingHr">
   
-            <form>
-              <input type="text" name="name" class="nameInput input" placeholder="Name" data-aos="fade-up">
-              <input type="email" name="email" class="nameInput input" placeholder="Email" data-aos="fade-up">
-              <textarea name="message" class="messageInput input" placeholder="Message" data-aos="fade-up"></textarea>
-              <input class="sendButton" onclick="contactSubmit()" value="Send" type="submit" data-aos="fade-up">
+            <form action="https://formsubmit.co/boeckmannben@gmail.com" method="POST" onsubmit="emailSent()">
+              <input type="text" id="name" name="name" class="nameInput input" placeholder="Name" data-aos="fade-up" required>
+              
+              <input type="email" id="email" name="email" class="nameInput input" placeholder="Email" data-aos="fade-up" required>
+
+              <textarea name="message" id="message" class="messageInput input" placeholder="Message" data-aos="fade-up" required></textarea>
+
+              <input class="sendButton" value="Send" type="submit" data-aos="fade-up">
+
+              <input type="hidden" name="_next" value="https://bencodes.netlify.app">
+              <input type="hidden" name="_captcha" value="false">
             </form>
         </section>
   
@@ -540,6 +546,7 @@
       gl_PointSize = (3.0);}
   </script>
 
+  <!-- Shader (s. sources.html) -->
   <script id="fragmentShader" type="x-shader/x-vertex">
     varying float qnoise;
     varying float noise;

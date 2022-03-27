@@ -97,9 +97,9 @@ function closePopUp3() {
 
 // ----- Contact Submit ----- //
 
-function contactSubmit() {
-  window.alert('Ich habe leider kein BackEnd programmiert. Ich bin nur ein FrontEnd Dev :)');
-}
+// function contactSubmit() {
+//   window.alert('Ich habe leider kein BackEnd programmiert. Ich bin nur ein FrontEnd Dev :)');
+// }
 
 
 
