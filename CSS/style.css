@@ -28,6 +28,7 @@
   --footer-color: #6c757d;
 }
 
+/* Setting default CSS */
 * {
   margin: 0;
   padding: 0;
@@ -46,6 +47,7 @@ body {
   overflow: auto;
 }
 
+/* Three.js Canvas */
 canvas {
   position: fixed;
   top: 0;
@@ -139,6 +141,7 @@ header.sticky .navList li .navLink:after {
   height: 100%;
 }
 
+/* Night Mode Symbols*/
 .sun {
   position: absolute;
   top: -0.875rem;
@@ -279,6 +282,7 @@ header.sticky .hamburger:before {
   border-radius: 10px;
 }
 
+/* Typing Animation */
 @keyframes typeAnim {
   to {
     left: 100%;
