@@ -19,6 +19,7 @@ function initAll() {
   animation();
 }
 
+// Starten der Scene
 function initScene() {
   scene = new THREE.Scene();
   scene.background = new THREE.Color(0x292733);
@@ -139,6 +140,7 @@ function createPrimitive() {
   primitive = new primitiveElement();
 }
 
+// Werte des Objektes
 let options = {
   perlin: {
     speed: 0.4,
@@ -189,6 +191,7 @@ let options = {
 
 window.addEventListener("resize", onWindowResize);
 
+// Animation abspielen
 function animation() {
   primitive.point.visible = options.perlin.points;
   //---
