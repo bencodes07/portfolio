@@ -402,6 +402,7 @@ header.sticky .hamburger:before {
   background: var(--sec-color);
   border-radius: 10px;
   transition: all 0.4s ease;
+  margin-bottom: 50px;
 }
 
 .card:hover {
