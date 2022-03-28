@@ -19,7 +19,7 @@ function initAll() {
   animation();
 }
 
-// Starten der Scene
+// ----- Starten der Scene ----- //
 function initScene() {
   scene = new THREE.Scene();
   scene.background = new THREE.Color(0x292733);
@@ -44,7 +44,7 @@ function initScene() {
   document.body.appendChild(renderer.domElement);
 }
 
-//scrolling
+// ----- Bewegen auf scroll ----- //
 function moveCamera() {
   const t = document.body.getBoundingClientRect().top - 1;
 
@@ -140,7 +140,7 @@ function createPrimitive() {
   primitive = new primitiveElement();
 }
 
-// Werte des Objektes
+// ----- Werte des Objektes ----- //
 let options = {
   perlin: {
     speed: 0.4,
@@ -191,7 +191,7 @@ let options = {
 
 window.addEventListener("resize", onWindowResize);
 
-// Animation abspielen
+// ----- Animation abspielen ----- //
 function animation() {
   primitive.point.visible = options.perlin.points;
   //---
