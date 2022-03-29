@@ -197,10 +197,17 @@ header.sticky .sun {
   display: block;
   width: 100%;
   height: 4px;
-  background: #fff;
+  background: var(--page-text);
   margin-top: 6px;
   border-radius: 1rem;
   transition: all 0.5s;
+}
+
+.navList.active .nightModeChange .hamburger .line,
+.navList.active .nightModeChange .hamburger:after,
+.navList.active .nightModeChange .hamburger:before {
+  background: #fff;
+  color: #fff;
 }
 
 .hamburger.active .line {
@@ -842,5 +849,9 @@ footer {
 @media screen and (max-width: 420px) {
   .logo {
     font-size: 1.7rem;
+  }
+
+  header {
+    padding: 40px 60px;
   }
 }
