@@ -42,6 +42,8 @@ function initScene() {
   renderer.shadowMap.enabled = true;
 
   document.body.appendChild(renderer.domElement);
+
+  window.addEventListener("resize", onWindowResize, false);
 }
 
 // ----- Bewegen auf scroll ----- //
@@ -148,53 +150,20 @@ let options = {
     perlins: 1.0,
     decay: 1.2,
     displace: 1.0,
-    complex: 0.2,
+    complex: 0.5,
     waves: 3.7,
     eqcolor: 10.0,
     rcolor: 0,
     gcolor: 1,
     bcolor: 1.5,
+    fragment: true,
     points: false,
     redhell: true,
   },
-  perlinRandom: function () {
-    TweenMax.to(this.perlin, 2, {
-      //decay: Math.random() * 1.0,
-      waves: Math.random() * 20.0,
-      complex: Math.random() * 1.0,
-      displace: Math.random() * 2.5,
-      ease: Elastic.easeOut,
-    });
-  },
-  random: function () {
-    //this.perlin.redhell = Math.random() >= 0.5; // 10 1 0.1 1.2
-    TweenMax.to(this.perlin, 1, {
-      eqcolor: 11.0,
-      rcolor: Math.random() * 1.5,
-      gcolor: Math.random() * 0.5,
-      bcolor: Math.random() * 1.5,
-      ease: Quart.easeInOut,
-    });
-  },
-  normal: function () {
-    this.perlin.redhell = true; // 10 1 0.1 1.2
-    TweenMax.to(this.perlin, 1, {
-      //speed: 0.12,
-      eqcolor: 10.0,
-      rcolor: 1.5,
-      gcolor: 1.5,
-      bcolor: 1.5,
-      ease: Quart.easeInOut,
-    });
-  },
 };
-
-window.addEventListener("resize", onWindowResize);
 
 // ----- Animation abspielen ----- //
 function animation() {
-  primitive.point.visible = options.perlin.points;
-  //---
   mat.uniforms["time"].value =
     (options.perlin.speed / 1000) * (Date.now() - start);
 
@@ -205,13 +174,13 @@ function animation() {
   mat.uniforms["complex"].value = options.perlin.complex;
   mat.uniforms["waves"].value = options.perlin.waves;
   mat.uniforms["fragment"].value = options.perlin.fragment;
+  primitive.point.visible = options.perlin.points;
 
   mat.uniforms["redhell"].value = options.perlin.redhell;
   mat.uniforms["eqcolor"].value = options.perlin.eqcolor;
   mat.uniforms["rcolor"].value = options.perlin.rcolor;
   mat.uniforms["gcolor"].value = options.perlin.gcolor;
   mat.uniforms["bcolor"].value = options.perlin.bcolor;
-  //---
 
   localStorage.getItem("nightMode") === "true"
     ? (scene.background = lightTheme)
