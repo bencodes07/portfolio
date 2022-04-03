@@ -1,0 +1,68 @@
+:root {
+  --main-color: #292733;
+  --sec-color: #3b3849;
+  --static-header-color: #fff;
+  --website-blue-color: rgb(97, 171, 255);
+  --nav-link-color: rgb(114, 233, 35);
+  --typewrite-speed: 3s;
+  --page-text: #fff;
+  --tag-color: #504c63;
+  --footer-color: #3b3849;
+  --contact-text-color: #6e6986;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--main-color);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  width: 40%;
+}
+
+.input {
+  width: 300px;
+  border: none;
+  outline: none;
+  background-color: var(--sec-color);
+  padding: 1.2rem 1rem;
+  margin-bottom: 20px;
+  border-radius: 6px;
+  font-size: 1.2rem;
+  font-weight: 100;
+  color: #fff;
+}
+
+.input::placeholder {
+  color: var(--page-text);
+}
+
+button {
+  width: 300px;
+  border: none;
+  outline: none;
+  padding: 1.2rem 1rem;
+  background: var(--website-blue-color);
+  color: var(--page-text);
+  cursor: pointer;
+  border-radius: 6px;
+  font-size: 1.2rem;
+  transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+  background: rgb(72, 127, 189);
+}

@@ -89,6 +89,10 @@ function closePopUp3() {
   popup3.classList.remove('active');
 }
 
+// ----- Get Website Visits ----- //
+function websiteVisits(res) {
+  document.getElementById("count").textContent = res.value;
+}
 
 
 
