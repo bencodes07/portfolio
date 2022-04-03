@@ -85,6 +85,11 @@ header.sticky .logo {
   color: var(--main-color);
 }
 
+.header.sticky .navList li a:hover {
+  color: var(--website-blue-color);
+}
+
+
 .logo {
   position: relative;
   color: var(--page-text);
@@ -134,14 +139,20 @@ header.sticky .logo {
 }
 
 header.sticky .navList li .navLink:after {
-  color: var(--main-color);
+  color: var(--page-text);
+}
+
+
+.nightModeChange header.sticky  .navList li .navLink:after {
+  color: var(--nav-link-color)
 }
 
 .navList li .navLink:hover:after {
   height: 100%;
 }
 
-/* Night Mode Symbols*/
+/* Night Mode Symbols */
+
 .sun {
   position: absolute;
   top: -0.875rem;

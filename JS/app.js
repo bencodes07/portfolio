@@ -52,7 +52,6 @@ hamburgerSwitch.addEventListener('click', function(e) {
 });
 
 
-
 // ----- Project Section Popups----- //
 
 const popupButton1 = document.querySelector('.readButton1');
@@ -89,6 +88,8 @@ function closePopUp3() {
   console.log("closed");
   popup3.classList.remove('active');
 }
+
+
 
 
 // ----- Contact Submit ----- //
