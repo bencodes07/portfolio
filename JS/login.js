@@ -6,7 +6,7 @@ const form = document.getElementById('form');
 // Disclaimer: Es ist nicht auf Sicherheit angelegt... jeder der einen PC hat kommt rein :D
 form.addEventListener('submit', (e) => {
   let messages = [];
-  if(usernameElement.value == 'admin' && passwordElement.value == 'admin') {
+  if(usernameElement.value == 'admin' && passwordElement.value == 'admin' && emailInput.value == 'admin@admin.dev') {
     window.location.href('admin.html');
   } else {
     messages.push('Username oder Passwort falsch');
@@ -48,4 +48,11 @@ passwordInput.addEventListener('input', (e) => {
   passSpan.innerText = passwordInput.value;
 });
 
-
+window.onload = function() {
+  nightMode = localStorage.getItem("nightMode");
+  if (nightMode == "true") {
+    document.body.classList.add("nightModeChange");
+    localStorage.setItem("nightMode", null);
+    console.log("night mode off...");
+  }
+};
