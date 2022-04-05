@@ -1,27 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sign In | bencodes</title>
-  <script defer src="../JS/login.js"></script> 
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign In | bencodes</title>
+    <script defer src="../JS/login.js"></script>
   <link rel="stylesheet" href="../CSS/login.css">
 </head>
 <body>
-  <div id="error"></div>
   <form id="form" action="./admin.html" method="GET">
-    <div>
-      <input class="input" type="text" name="username" id="username" required placeholder="Username">
-    </div>
-    <div>
-      <input class="input" type="password" name="password" id="password" required placeholder="Password">
-    </div>
-    <button type="submit">SIGN IN</button>
-  </form>
+      <div>
+        <input
+          class="input"
+          type="text"
+          name="username"
+          id="username"
+          required
+          placeholder="Username"
+        />
+      </div>
+      <div>
+        <input
+          class="input"
+          type="email"
+          name="email"
+          id="email"
+          required
+          placeholder="Email"
+        />
+      </div>
+      <div>
+        <input
+          class="input"
+          type="password"
+          name="password"
+          id="password"
+          required
+          placeholder="Password"
+        />
+      </div>
+      
+      <button type="submit">SIGN IN</button>
+    </form>
 
-  <div class="json">
-    
-  </div>
-</body>
+    <div class="json">
+      <div class="text">
+        <p>
+          {
+        </p>
+        <p class="inset1 inset2">
+          "name": "<span id="nameSpan">name</span>",
+        </p>
+        <p class="inset1 inset2">
+          "email": {
+        </p>
+        <p class="inset1 inset2 inset3">
+          "value": "<span id="emailSpan">email@email.com</span>",
+        </p>
+        <p class="inset1 inset2 inset3">
+          "valid": "<span id="validSpan">true</span>"
+        </p>
+        <p class="inset1">
+          },
+        </p>
+        <p class="inset1 inset2">
+          "password": {
+        </p>
+        <p class="inset1 inset2 inset3">
+          "value": "<span id="passSpan">password</span>",
+        </p>
+        <p class="inset1">
+          },
+        </p>
+        <p>
+          }
+        </p>
+      </div>
+      
+    </div>
+  </body>
 </html>

@@ -20,3 +20,32 @@ form.addEventListener('submit', (e) => {
   e.preventDefault();
 });
 
+const json = document.getElementById('json');
+const nameInput = document.getElementById('username');
+const passwordInput = document.getElementById('password');
+const emailInput = document.getElementById('email');
+const nameSpan = document.getElementById('nameSpan');
+const passSpan = document.getElementById('passSpan');
+const emailSpan = document.getElementById('emailSpan');
+const validSpan = document.getElementById('validSpan');
+
+nameInput.addEventListener('input', (e) => {
+  nameSpan.innerText = nameInput.value;
+});
+
+emailInput.addEventListener('input', (e) => {
+  emailSpan.innerText = emailInput.value;
+  if(emailInput.value.includes('@' && '.') && emailInput.value.length > 8) {
+    validSpan.innerText = 'true';
+    console.log('true');
+  } else {
+    validSpan.innerText = 'false';
+    console.log('false');
+  }
+})
+
+passwordInput.addEventListener('input', (e) => {
+  passSpan.innerText = passwordInput.value;
+});
+
+
