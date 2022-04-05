@@ -33,10 +33,15 @@
 
 body {
   background: var(--main-color);
+  font-family: 'Cutive Mono', monospace;
+  overflow: hidden;
+}
+
+.container {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  font-family: 'Cutive Mono', monospace;
+  height: 100vh;
 }
 
 form {
@@ -49,8 +54,6 @@ form {
   background: var(--sec-color);
   border-radius: 20px;
   box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.4);
-  margin-top: 50%;
-  transform: translateY(-50%);
 }
 
 .input {
@@ -96,8 +99,6 @@ button:hover {
   padding-left: 1rem;
   border-radius: 20px;
   box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.4);
-  margin-top: 50%;
-  transform: translateY(-50%);
 }
 
 .text {
@@ -123,7 +124,21 @@ button:hover {
   margin-left: 90px;
 }
 
+@media screen and (max-width: 1100px) {
+  .json {
+    display: none;
+  }
+}
 
+@media screen and (max-width: 550px) {
+  body {
+    background-color: var(--sec-color);
+  }
+
+  form {
+    box-shadow:none;
+  }
+}
 
 
 
