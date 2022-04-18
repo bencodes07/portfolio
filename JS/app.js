@@ -3,7 +3,8 @@
 
 window.addEventListener("scroll", function () {
   let header = document.querySelector("header");
-  header.classList.toggle("sticky", window.scrollY > 0);
+  header.classList.toggle("active", window.scrollY > 0);
+  // console.log(window.scrollY);
 });
 
 
@@ -18,7 +19,8 @@ function initNightMode() {
   if (nightMode == "true") {
     document.body.classList.add("nightModeChange");
     localStorage.setItem("nightMode", "true");
-    console.log("night mode on...");
+    // console.log("night mode on...");
+    // console.log(nightMode);
   }
 }
 
@@ -32,11 +34,11 @@ const switchNightMode = () => {
   if (nightMode !== "true") {
     document.body.classList.add("nightModeChange");
     localStorage.setItem("nightMode", "true");
-    console.log("night mode on...");
+    // console.log("night mode on...");
   } else {
     document.body.classList.remove("nightModeChange");
     localStorage.setItem("nightMode", null);
-    console.log("night mode off...");
+    // console.log("night mode off...");
   }
 };
 

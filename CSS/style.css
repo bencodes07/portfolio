@@ -63,41 +63,43 @@ canvas {
 /* Navbar */
 
 header {
-  z-index: 1000;
   position: fixed;
   top: 0;
   left: 0;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
+  z-index: 100;
   padding: 40px 100px;
   transition: all 0.6s ease;
 }
 
-header.sticky {
+header.active {
   padding: 5px 80px;
   background: var(--website-blue-color);
 }
 
-header.sticky .navList li a,
-header.sticky .logo {
+header.active .navList li a,
+header.active .logo {
   color: var(--main-color);
 }
 
-.header.sticky .navList li a:hover {
+.header.active .navList li a:hover {
   color: var(--website-blue-color);
 }
 
 
 .logo {
-  position: relative;
   color: var(--page-text);
+  position: relative;
+  top: 0;
+  left: 0;
+  transition: all 0.6s ease;
   text-transform: lowercase;
   font-size: 2em;
   text-decoration: none;
   font-weight: 600;
-  transition: all 0.6s ease;
   letter-spacing: 2px;
 }
 
@@ -106,10 +108,10 @@ header.sticky .logo {
 }
 
 .navList {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
 }
 
 .navList li {
@@ -121,9 +123,9 @@ header.sticky .logo {
   position: relative;
   margin: 0 15px;
   color: var(--page-text);
-  letter-spacing: 2px;
-  font-weight: 400;
   text-decoration: none;
+  font-weight: 400;
+  letter-spacing: 2px;
   transition: all 0.6s ease;
 }
 
@@ -138,12 +140,12 @@ header.sticky .logo {
   transition: 0.4s ease-in-out;
 }
 
-header.sticky .navList li .navLink:after {
+header.active .navList li .navLink:after {
   color: var(--page-text);
 }
 
 
-.nightModeChange header.sticky  .navList li .navLink:after {
+.nightModeChange header.active  .navList li .navLink:after {
   color: var(--nav-link-color)
 }
 
@@ -174,7 +176,7 @@ header.sticky .navList li .navLink:after {
   transition: all 0.5s ease;
 }
 
-header.sticky .moon {
+header.active .moon {
   color: var(--main-color);
 }
 
@@ -186,7 +188,7 @@ body.nightModeChange .sun {
   display: none;
 }
 
-header.sticky .sun {
+header.active .sun {
   color: #292733;
 }
 
@@ -234,9 +236,9 @@ header.sticky .sun {
   transform: rotate(45deg) translate(-9px, -5px);
 }
 
-header.sticky .hamburger .line,
-header.sticky .hamburger:after,
-header.sticky .hamburger:before {
+header.active .hamburger .line,
+header.active .hamburger:after,
+header.active .hamburger:before {
   background: var(--main-color);
 }
 
@@ -318,7 +320,7 @@ header.sticky .hamburger:before {
 #about {
   margin-top: 35%;
   padding-top: 20px;
-  padding-bottom: 200px;
+  padding-bottom: 100px;
   background-color: var(--sec-color);
   box-shadow: 0px 6px 20px 4px rgba(0, 0, 0, 0.2);
   width: 100%;
@@ -360,8 +362,9 @@ header.sticky .hamburger:before {
   justify-content: center;
   align-items: center;
   list-style: none;
-  margin: 20px auto;
   transition: all 0.4s ease;
+  padding-top: 50px;
+  margin-left: 30px;
 }
 
 .aboutSocials li {
@@ -421,6 +424,7 @@ header.sticky .hamburger:before {
   border-radius: 10px;
   transition: all 0.4s ease;
   margin-bottom: 50px;
+  margin-right: 10px;
 }
 
 .card:hover {
@@ -758,9 +762,9 @@ footer {
 
 /* Mobile Design */
 
-@media screen and (max-width: 1216px) {
+@media screen and (max-width: 1252px) {
   #skills {
-    margin-top: 750px;
+    margin-top: 550px;
   }
 }
 
@@ -811,7 +815,7 @@ footer {
     left: -20px;
   }
 
-  header.sticky .sun {
+  header.active .sun {
     color: #fff;
   }
 
@@ -819,7 +823,7 @@ footer {
     color: #fff;
   }
 
-  .navList.active header.sticky {
+  .navList.active header.active {
     padding: 40px 100px;
   }
 
@@ -830,7 +834,7 @@ footer {
     color: #fff;
   }
 
-  header.sticky .navList li a {
+  header.active .navList li a {
     color: #fff;
   }
 
@@ -851,9 +855,9 @@ footer {
   }
 }
 
-@media screen and (max-width: 816px) {
+@media screen and (max-width: 839px) {
   #skills {
-    margin-top: 1200px;
+    margin-top: 1100px;
   }
 }
 
