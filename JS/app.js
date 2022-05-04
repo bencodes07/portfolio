@@ -96,6 +96,13 @@ function websiteVisits(res) {
   document.getElementById("count").textContent = res.value;
 }
 
+// ----- Website Preloader ----- //
+
+var loader = document.getElementById('preloader');
+
+window.addEventListener('load', function() {
+  loader.style.display = 'none';
+});
 
 
 // ----- Contact Submit ----- //
