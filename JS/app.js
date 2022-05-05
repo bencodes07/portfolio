@@ -46,12 +46,53 @@ const switchNightMode = () => {
 
 // ----- Hamburger Menu ----- //
 
+var hamburgerActive = false;
+
+const homeLink = document.querySelector('.home');
+const aboutLink = document.querySelector('.about');
+const projectsLink = document.querySelector('.projects');
+const skillsLink = document.querySelector('.skills');
+const contactLink = document.querySelector('.contact');
+
 const hamburgerSwitch = document.querySelector(".hamburger");
 const smallerNav = document.querySelector('.navList');
 hamburgerSwitch.addEventListener('click', function(e) {
   hamburgerSwitch.classList.toggle('active');
   smallerNav.classList.toggle('active');
+
+  if(hamburgerActive == false) {
+    hamburgerActive = true;
+  } else {
+    hamburgerActive = false;
+  }
 });
+
+if(hamburgerActive == true) {
+  homeLink.addEventListener('click', () => {
+    hamburgerSwitch.classList.remove('active');
+    smallerNav.classList.remove('active');
+  });
+
+  aboutLink.addEventListener('click', () => {
+    hamburgerSwitch.classList.remove('active');
+    smallerNav.classList.remove('active');
+  });
+
+  projectsLink.addEventListener('click', () => {
+    hamburgerSwitch.classList.remove('active');
+    smallerNav.classList.remove('active');
+  });
+
+  skillsLink.addEventListener('click', () => {
+    hamburgerSwitch.classList.remove('active');
+    smallerNav.classList.remove('active');
+  });
+
+  contactLink.addEventListener('click', () => {
+    hamburgerSwitch.classList.remove('active');
+    smallerNav.classList.remove('active');
+  });
+}
 
 
 // ----- Project Section Popups----- //
