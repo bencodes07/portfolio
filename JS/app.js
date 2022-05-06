@@ -72,26 +72,6 @@ if(hamburgerActive == true) {
     hamburgerSwitch.classList.remove('active');
     smallerNav.classList.remove('active');
   });
-
-  aboutLink.addEventListener('click', () => {
-    hamburgerSwitch.classList.remove('active');
-    smallerNav.classList.remove('active');
-  });
-
-  projectsLink.addEventListener('click', () => {
-    hamburgerSwitch.classList.remove('active');
-    smallerNav.classList.remove('active');
-  });
-
-  skillsLink.addEventListener('click', () => {
-    hamburgerSwitch.classList.remove('active');
-    smallerNav.classList.remove('active');
-  });
-
-  contactLink.addEventListener('click', () => {
-    hamburgerSwitch.classList.remove('active');
-    smallerNav.classList.remove('active');
-  });
 }
 
 
