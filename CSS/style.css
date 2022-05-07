@@ -242,6 +242,22 @@ header.active .hamburger:before {
   background: var(--main-color);
 }
 
+.mobileLogo {
+  visibility: hidden;
+}
+
+.mobileP {
+  visibility: hidden;
+}
+
+.triangle {
+  visibility: hidden;
+}
+
+.topTriangle {
+  visibility: hidden;
+}
+
 /* Hero */
 
 #hero {
@@ -792,6 +808,7 @@ footer {
     position: absolute;
     padding: 50% 0;
     width: 100%;
+    height: 100vh;
     text-align: center;
     top: 0;
     left: 0;
@@ -799,8 +816,59 @@ footer {
     transition: transform 0.5s ease;
   }
 
+  .navList.active .triangle {
+    visibility: visible;
+    width: 0;
+    height: 0;
+    border-top: 10vh solid var(--sec-color);
+    border-left: 100vw solid transparent;
+    z-index: 10;
+    position: absolute;
+    top: 23vh;
+    right: 0;
+  }
+
+  .navList.active .topTriangle {
+    visibility: visible;
+    width: 100vh;
+    height: 23vh;
+    background-color: var(--sec-color);
+    position: absolute;
+    top: 0;
+  }
+
+  .navList.active .mobileLogo {
+    visibility: visible;
+    position: absolute;
+    z-index: 1;
+    top: 10vh;
+    left: 4vw;
+    font-size: 3rem;
+    color: var(--page-text);
+  }
+
+  .navList.active .mobileP {
+    visibility: visible;
+    position: absolute;
+    right: 1vw;
+    top: -30px;
+    width: max-content;
+    z-index: 11;
+    color: var(--page-text);
+    font-size: 0.8rem;
+
+  }
+
   .navList.active {
     transform: translateY(0);
+  }
+
+  .navList li {
+    margin-top: 20px;
+  }
+
+  .navList .homeLi {
+    margin-top: 10vh;
   }
 
   .navLink {
