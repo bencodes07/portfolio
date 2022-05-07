@@ -1,10 +1,14 @@
 
 // ----- Navbar Change ----- //
 
+let hamburgerActive = false;
+
 window.addEventListener("scroll", function () {
-  let header = document.querySelector("header");
-  header.classList.toggle("active", window.scrollY > 0);
-  // console.log(window.scrollY);
+  if(hamburgerActive === false) {
+    let header = document.querySelector("header");
+    header.classList.toggle("active", window.scrollY > 0);
+    // console.log(window.scrollY);
+  }
 });
 
 
@@ -46,19 +50,13 @@ const switchNightMode = () => {
 
 // ----- Hamburger Menu ----- //
 
-var hamburgerActive = false;
-
-const homeLink = document.querySelector('.home');
-const aboutLink = document.querySelector('.about');
-const projectsLink = document.querySelector('.projects');
-const skillsLink = document.querySelector('.skills');
-const contactLink = document.querySelector('.contact');
-
 const hamburgerSwitch = document.querySelector(".hamburger");
 const smallerNav = document.querySelector('.navList');
 hamburgerSwitch.addEventListener('click', function(e) {
   hamburgerSwitch.classList.toggle('active');
   smallerNav.classList.toggle('active');
+
+  document.body.classList.toggle('navListActive');
 
   if(hamburgerActive == false) {
     hamburgerActive = true;
@@ -67,12 +65,15 @@ hamburgerSwitch.addEventListener('click', function(e) {
   }
 });
 
-if(hamburgerActive == true) {
-  homeLink.addEventListener('click', () => {
+function linkClicked() {
+  if(hamburgerActive === true) {
+    console.log('clicked');
     hamburgerSwitch.classList.remove('active');
     smallerNav.classList.remove('active');
-  });
+    hamburgerActive = false;
+  }
 }
+
 
 
 // ----- Project Section Popups----- //
@@ -132,8 +133,31 @@ window.addEventListener('load', function() {
 //   window.alert('Ich habe leider kein BackEnd programmiert. Ich bin nur ein FrontEnd Dev :)');
 // }
 
+// ----- Mobile Menu Paragraph Rotation ----- //
 
+const text = document.querySelector('.mobileP');
+const triangle = document.querySelector('.triangle');
 
+let triangleWidth = window.innerWidth;
+let triangleHeight = vhToPx(10);
+
+function vhToPx(value) {
+  var w = window,
+    d = document,
+    e = d.documentElement,
+    g = d.getElementsByTagName('body')[0],
+    y = w.innerHeight|| e.clientHeight|| g.clientHeight;
+
+  var result = (y*value)/100;
+  return result;
+}
+
+function getTangent(opposite, adjacent) {
+  return Math.atan(opposite / adjacent);
+}
+
+console.log(getTangent(triangleHeight, triangleWidth));
+text.style.transform = `rotateZ(${getTangent(triangleHeight, triangleWidth)}rad)`;
 
 
 
