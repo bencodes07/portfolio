@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="CSS/style.css" />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-
     <!--IonIcons (Große Icon Library)-->
     <script
       type="module"
@@ -32,12 +31,22 @@
       <header> <!----- Navbar ----->
         <a href="#" class="logo" data-text="bencodes">bencodes</a>
   
+        
         <ul class="navList">
-          <li><a class="navLink home" data-text="Home" href="#hero">Home</a></li>
-          <li><a class="navLink about" data-text="About" href="#about">About</a></li>
-          <li><a class="navLink projects" data-text="Projects" href="#projects">Projects</a></li>
-          <li><a class="navLink skills" data-text="Skills" href="#skills">Skills</a></li>
-          <li><a class="navLink contact" data-text="Contact" href="#contact">Contact</a></li>
+
+          <a href="#" class="logo mobileLogo">bencodes</a>
+          
+          <div class="topTriangle"></div>
+          <div class="triangle">
+            <p class="mobileP">Ben Böckmann</p>
+          </div>
+
+
+          <li class="homeLi"><a class="navLink home" onclick="linkClicked()" data-text="Home" href="#hero">Home</a></li>
+          <li><a class="navLink about" onclick="linkClicked()" data-text="About" href="#about">About</a></li>
+          <li><a class="navLink projects" onclick="linkClicked()" data-text="Projects" href="#projects">Projects</a></li>
+          <li><a class="navLink skills" onclick="linkClicked()" data-text="Skills" href="#skills">Skills</a></li>
+          <li><a class="navLink contact" onclick="linkClicked()" data-text="Contact" href="#contact">Contact</a></li>
           <li>
             <ion-icon class="moon nightModeSwitch" name="moon-outline"></ion-icon>
           </li>
