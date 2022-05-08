@@ -112,11 +112,15 @@ header.active .logo {
   display: flex;
   justify-content: center;
   align-items: center;
+  right: -2rem;
 }
 
 .navList li {
   position: relative;
   list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .navList li a {
@@ -127,6 +131,7 @@ header.active .logo {
   font-weight: 400;
   letter-spacing: 2px;
   transition: all 0.6s ease;
+  width: fit-content;
 }
 
 .navList li .navLink:after {
@@ -158,7 +163,7 @@ header.active .navList li .navLink:after {
 .sun {
   position: absolute;
   top: -0.875rem;
-  margin-left: 0.5rem;
+  margin-left: 2.5rem;
   color: var(--page-text);
   cursor: pointer;
   font-size: 1.75rem;
@@ -168,7 +173,7 @@ header.active .navList li .navLink:after {
 .moon {
   position: absolute;
   top: -0.875rem;
-  margin-left: 0.5rem;
+  margin-left: 2.5rem;
   font-size: 1.75rem;
   color: var(--page-text);
   display: none;
@@ -243,7 +248,7 @@ header.active .hamburger:before {
 }
 
 .mobileLogo {
-  visibility: hidden;
+  display: none;
 }
 
 .mobileP {
@@ -251,11 +256,11 @@ header.active .hamburger:before {
 }
 
 .triangle {
-  visibility: hidden;
+  display: none;
 }
 
 .topTriangle {
-  visibility: hidden;
+  display: none;
 }
 
 /* Hero */
@@ -817,7 +822,7 @@ footer {
   }
 
   .navList.active .triangle {
-    visibility: visible;
+    display: flex;
     width: 0;
     height: 0;
     border-top: 10vh solid var(--sec-color);
@@ -829,7 +834,7 @@ footer {
   }
 
   .navList.active .topTriangle {
-    visibility: visible;
+    display: flex;
     width: 100vh;
     height: 23vh;
     background-color: var(--sec-color);
@@ -838,7 +843,7 @@ footer {
   }
 
   .navList.active .mobileLogo {
-    visibility: visible;
+    display: flex;
     position: absolute;
     z-index: 1;
     top: 10vh;
@@ -880,7 +885,7 @@ footer {
     margin-top: 30px;
     color: #fff;
     position: absolute;
-    left: -20px;
+    left: -55px;
   }
 
   header.active .sun {
@@ -896,9 +901,9 @@ footer {
   }
 
   .moon {
-    margin-top: 30px;
+    margin-top: 50px;
     position: absolute;
-    left: -20px;
+    left: -55px;
     color: #fff;
   }
 
