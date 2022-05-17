@@ -2,15 +2,24 @@
 // ----- Navbar Change ----- //
 
 let hamburgerActive = false;
+let navbarActive = false;
+
+const header = document.querySelector("header");
 
 window.addEventListener("scroll", function () {
   if(hamburgerActive === false) {
-    let header = document.querySelector("header");
+    
     header.classList.toggle("active", window.scrollY > 0);
+    navbarActive = true;
     // console.log(window.scrollY);
   }
-});
 
+  if(header.classList.contains('active')) {
+    navbarActive = true;
+  } else {
+    navbarActive = false;
+  }
+});
 
 
 // ----- Dark & Light Mode ----- //
