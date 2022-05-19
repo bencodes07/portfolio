@@ -56,7 +56,6 @@ const switchNightMode = () => {
 };
 
 
-
 // ----- Hamburger Menu ----- //
 
 const hamburgerSwitch = document.querySelector(".hamburger");
@@ -167,6 +166,3 @@ function getTangent(opposite, adjacent) {
 
 // console.log(getTangent(triangleHeight, triangleWidth));
 text.style.transform = `rotateZ(${getTangent(triangleHeight, triangleWidth)}rad)`;
-
-
-
