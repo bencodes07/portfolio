@@ -170,25 +170,3 @@ text.style.transform = `rotateZ(${getTangent(triangleHeight, triangleWidth)}rad)
 
 
 
-// ----- Footer Joke: ----- //
-
-const p = document.querySelector('.footerJoke');
-
-async function getJoke() {
-  const jokeData = fetch('https://icanhazdadjoke.com', {
-  headers: {
-    Accept: 'application/json'
-  }
-})
-  const jokeObject = await (await jokeData).json();
-  p.innerHTML = `<span>Joke of the Day:</span> ${jokeObject.joke}`;
-}
-
-var schedule = require('node-schedule');
-
-// Schedule 24 hours
-var j = schedule.scheduleJob('0 0 * * *', function(){
-  getJoke();
-});
-
-

@@ -112,7 +112,7 @@ header.active .logo {
   display: flex;
   justify-content: center;
   align-items: center;
-  right: -2rem;
+  right: 1rem;
 }
 
 .navList li {
@@ -809,7 +809,7 @@ footer {
   }
 }
 
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 890px) {
   .navList {
     display: flex;
     flex-direction: column;
