@@ -164,5 +164,5 @@ function getTangent(opposite, adjacent) {
   return Math.atan(opposite / adjacent);
 }
 
-// console.log(getTangent(triangleHeight, triangleWidth));
+console.log(getTangent(triangleHeight, triangleWidth));
 text.style.transform = `rotateZ(${getTangent(triangleHeight, triangleWidth)}rad)`;
