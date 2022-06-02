@@ -70,23 +70,23 @@ let primitiveElement = function () {
     uniforms: {
       time: {
         type: "f",
-        value: 0.1,
+        value: 0,
       },
       pointscale: {
         type: "f",
-        value: 0.2,
+        value: 0,
       },
       decay: {
         type: "f",
-        value: 0.3,
+        value: 0,
       },
       size: {
         type: "f",
-        value: 0.3,
+        value: 0,
       },
       displace: {
         type: "f",
-        value: 0.3,
+        value: 0,
       },
       complex: {
         type: "f",
@@ -94,7 +94,7 @@ let primitiveElement = function () {
       },
       waves: {
         type: "f",
-        value: 0.1,
+        value: 0,
       },
       eqcolor: {
         type: "f",
@@ -114,11 +114,11 @@ let primitiveElement = function () {
       },
       fragment: {
         type: "i",
-        value: true,
+        value: false,
       },
       redhell: {
         type: "i",
-        value: true,
+        value: false,
       },
     },
     vertexShader: document.getElementById("vertexShader").textContent,
@@ -147,16 +147,16 @@ let options = {
   perlin: {
     speed: 0.4,
     size: 0.7,
-    perlins: 1.0,
+    perlins: 0.5,
     decay: 1.2,
     displace: 1.0,
     complex: 0.5,
-    waves: 3.7,
+    waves: 3,
     eqcolor: 10.0,
     rcolor: 0,
     gcolor: 1,
     bcolor: 1.5,
-    fragment: true,
+    fragment: false,
     points: false,
     redhell: true,
   },
