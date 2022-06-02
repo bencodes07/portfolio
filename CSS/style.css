@@ -40,6 +40,7 @@
 html {
   scroll-behavior: smooth;
   overflow: auto;
+  scroll-padding-top: 75px;
 }
 
 body {
